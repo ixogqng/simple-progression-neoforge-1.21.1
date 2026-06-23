@@ -1,3 +1,8 @@
 {
-  "item.simpleprogression.kindling": "Kindling"
+  "item.simpleprogression.kindling": "Kindling",
+  "item.simpleprogression.flint_pickaxe": "Flint Pickaxe",
+  "item.simpleprogression.flint_sword": "Flint Sword",
+  "item.simpleprogression.flint_hoe": "Flint Hoe",
+  "item.simpleprogression.flint_axe": "Flint Axe",
+  "item.simpleprogression.flint_shovel": "Flint Shovel"
 }

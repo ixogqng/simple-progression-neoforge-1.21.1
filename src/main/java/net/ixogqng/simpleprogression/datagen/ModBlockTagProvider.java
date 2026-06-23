@@ -1,0 +1,33 @@
+package net.ixogqng.simpleprogression.datagen;
+
+import net.ixogqng.simpleprogression.SimpleProgression;
+import net.ixogqng.simpleprogression.util.ModTags;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.concurrent.CompletableFuture;
+
+public class ModBlockTagProvider extends BlockTagsProvider {
+    public ModBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, SimpleProgression.MODID, existingFileHelper);
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider provider) {
+        tag(ModTags.Blocks.NEEDS_FLINT_TOOL)
+                .addTag(BlockTags.NEEDS_STONE_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_FLINT_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .add(Blocks.COAL_ORE)
+                .remove(ModTags.Blocks.NEEDS_FLINT_TOOL);
+
+        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
+                .add(Blocks.COAL_ORE);
+    }
+}

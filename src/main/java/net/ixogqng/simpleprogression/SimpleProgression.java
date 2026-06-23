@@ -67,6 +67,11 @@ public class SimpleProgression {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.KINDLING);
+            event.accept(ModItems.FLINT_PICKAXE);
+            event.accept(ModItems.FLINT_SWORD);
+            event.accept(ModItems.FLINT_HOE);
+            event.accept(ModItems.FLINT_AXE);
+            event.accept(ModItems.FLINT_SHOVEL);
         }
     }
 
