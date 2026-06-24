@@ -20,5 +20,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.FLINT_HOE.get());
         handheldItem(ModItems.FLINT_AXE.get());
         handheldItem(ModItems.FLINT_SHOVEL.get());
+        handheldItem(ModItems.TIN_INGOT.get());
     }
 }

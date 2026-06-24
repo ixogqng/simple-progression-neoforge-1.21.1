@@ -21,6 +21,7 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> STICK_ITEMS = createTag("stick_items");
+        public static final TagKey<Item> GOLD_TOOLS = createTag("gold_tools");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SimpleProgression.MODID, name));

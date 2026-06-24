@@ -29,5 +29,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
                 .add(Blocks.COAL_ORE);
+
+        tag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
+                .remove(BlockTags.NEEDS_DIAMOND_TOOL)
+                .remove(BlockTags.NEEDS_IRON_TOOL)
+                .remove(BlockTags.NEEDS_STONE_TOOL);
     }
 }

@@ -39,5 +39,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.SHOVELS)
                 .add(ModItems.FLINT_SHOVEL.get());
+
+        tag(ModTags.Items.GOLD_TOOLS)
+                .add(Items.GOLDEN_PICKAXE)
+                .add(Items.GOLDEN_AXE)
+                .add(Items.GOLDEN_HOE)
+                .add(Items.GOLDEN_SHOVEL);
     }
 }

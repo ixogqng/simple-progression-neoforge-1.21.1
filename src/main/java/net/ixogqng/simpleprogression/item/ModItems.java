@@ -29,6 +29,9 @@ public class ModItems {
             () -> new ShovelItem(ModToolTiers.FLINT,
                     new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.FLINT, 1.5f, -3.0f))));
 
+    public static final DeferredItem<Item> TIN_INGOT = ITEMS.register("tin_ingot",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

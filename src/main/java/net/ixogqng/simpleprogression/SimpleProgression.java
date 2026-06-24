@@ -72,6 +72,7 @@ public class SimpleProgression {
             event.accept(ModItems.FLINT_HOE);
             event.accept(ModItems.FLINT_AXE);
             event.accept(ModItems.FLINT_SHOVEL);
+            event.accept(ModItems.TIN_INGOT);
         }
     }
 
