@@ -25,13 +25,10 @@ public class ModEvents {
     @SubscribeEvent
     public static void blockDropsEvent(BlockDropsEvent event) {
         if (event.getBreaker() instanceof Player) {
-            SimpleProgression.LOGGER.info("The breaker is a player");
             if (event.getTool().is(ModTags.Items.GOLD_TOOLS)) {
-                SimpleProgression.LOGGER.info("The player is holding a gold tool");
                 List<ItemEntity> drops = event.getDrops();
                 ServerLevel level = event.getLevel();
                 Block block = event.getState().getBlock();
-                SimpleProgression.LOGGER.info("The block is of type " + block);
                 if (block != Blocks.BUDDING_AMETHYST
                         && block != Blocks.CAKE
                         && block != Blocks.FARMLAND
@@ -45,15 +42,13 @@ public class ModEvents {
                         && block != Blocks.INFESTED_CRACKED_STONE_BRICKS
                         && block != Blocks.INFESTED_MOSSY_STONE_BRICKS
                         && block != Blocks.INFESTED_STONE_BRICKS) {
-                    SimpleProgression.LOGGER.info("The block is valid");
                     drops.clear();
-                    SimpleProgression.LOGGER.info("Cleared the drops");
                     drops.add(new ItemEntity(
                             level,
                             event.getPos().getX() + 0.5, event.getPos().getY() + 0.5, event.getPos().getZ() + 0.5,
                             new ItemStack(block, 1)
                     ));
-                    SimpleProgression.LOGGER.info("Spawned in the new drop");
+                    event.setDroppedExperience(0);
                 }
             }
         }

@@ -1,5 +1,6 @@
 package net.ixogqng.simpleprogression;
 
+import net.ixogqng.simpleprogression.block.ModBlocks;
 import net.ixogqng.simpleprogression.item.ModItems;
 import org.slf4j.Logger;
 
@@ -51,6 +52,7 @@ public class SimpleProgression {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -73,6 +75,18 @@ public class SimpleProgression {
             event.accept(ModItems.FLINT_AXE);
             event.accept(ModItems.FLINT_SHOVEL);
             event.accept(ModItems.TIN_INGOT);
+            event.accept(ModItems.TIN_HELMET);
+            event.accept(ModItems.TIN_CHESTPLATE);
+            event.accept(ModItems.TIN_LEGGINGS);
+            event.accept(ModItems.TIN_BOOTS);
+            event.accept(ModItems.TIN_PICKAXE);
+            event.accept(ModItems.TIN_SWORD);
+            event.accept(ModItems.TIN_AXE);
+            event.accept(ModItems.TIN_HOE);
+            event.accept(ModItems.TIN_SHOVEL);
+            event.accept(ModBlocks.TIN_BLOCK);
+            event.accept(ModBlocks.TIN_ORE);
+            event.accept(ModItems.RAW_TIN);
         }
     }
 

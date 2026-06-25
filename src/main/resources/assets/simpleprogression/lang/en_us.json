@@ -5,5 +5,17 @@
   "item.simpleprogression.flint_hoe": "Flint Hoe",
   "item.simpleprogression.flint_axe": "Flint Axe",
   "item.simpleprogression.flint_shovel": "Flint Shovel",
-  "item.simpleprogression.gold_pickaxe": "Gold Pickaxe"
+  "item.simpleprogression.tin_helmet": "Tin Helmet",
+  "item.simpleprogression.tin_boots": "Tin Boots",
+  "item.simpleprogression.tin_leggings": "Tin Leggings",
+  "item.simpleprogression.tin_chestplate": "Tin Chestplate",
+  "item.simpleprogression.tin_pickaxe": "Tin Pickaxe",
+  "item.simpleprogression.tin_shovel": "Tin Shovel",
+  "item.simpleprogression.tin_hoe": "Tin Hoe",
+  "item.simpleprogression.tin_sword": "Tin Sword",
+  "item.simpleprogression.tin_axe": "Tin Axe",
+  "item.simpleprogression.tin_ingot": "Tin Ingot",
+  "item.simpleprogression.raw_tin": "Raw Tin",
+  "block.simpleprogression.tin_block": "Block of Tin",
+  "block.simpleprogression.tin_ore": "Tin Ore"
 }

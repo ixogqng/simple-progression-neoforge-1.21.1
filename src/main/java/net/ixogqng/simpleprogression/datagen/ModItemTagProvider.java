@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -26,24 +27,47 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.STICK);
 
         tag(ItemTags.PICKAXES)
-                .add(ModItems.FLINT_PICKAXE.get());
+                .add(ModItems.FLINT_PICKAXE.get())
+                .add(ModItems.TIN_PICKAXE.get());
 
         tag(ItemTags.SWORDS)
-                .add(ModItems.FLINT_SWORD.get());
+                .add(ModItems.FLINT_SWORD.get())
+                .add(ModItems.TIN_SWORD.get());
 
         tag(ItemTags.HOES)
-                .add(ModItems.FLINT_HOE.get());
+                .add(ModItems.FLINT_HOE.get())
+                .add(ModItems.TIN_HOE.get());
 
         tag(ItemTags.AXES)
-                .add(ModItems.FLINT_AXE.get());
+                .add(ModItems.FLINT_AXE.get())
+                .add(ModItems.TIN_AXE.get());
 
         tag(ItemTags.SHOVELS)
-                .add(ModItems.FLINT_SHOVEL.get());
+                .add(ModItems.FLINT_SHOVEL.get())
+                .add(ModItems.TIN_SHOVEL.get());
 
         tag(ModTags.Items.GOLD_TOOLS)
                 .add(Items.GOLDEN_PICKAXE)
                 .add(Items.GOLDEN_AXE)
                 .add(Items.GOLDEN_HOE)
                 .add(Items.GOLDEN_SHOVEL);
+
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.TIN_BOOTS.get())
+                .add(ModItems.TIN_HELMET.get())
+                .add(ModItems.TIN_LEGGINGS.get())
+                .add(ModItems.TIN_CHESTPLATE.get());
+
+        tag(ItemTags.HEAD_ARMOR)
+                .add(ModItems.TIN_HELMET.get());
+
+        tag(ItemTags.FOOT_ARMOR)
+                .add(ModItems.TIN_BOOTS.get());
+
+        tag(ItemTags.CHEST_ARMOR)
+                .add(ModItems.TIN_CHESTPLATE.get());
+
+        tag(ItemTags.LEG_ARMOR)
+                .add(ModItems.TIN_LEGGINGS.get());
     }
 }

@@ -20,18 +20,17 @@ import java.util.function.Supplier;
 public class ModArmorMaterials {
     public static final Holder<ArmorMaterial> TIN_ARMOR_MATERIAL = register("tin",
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
-                attribute.put(ArmorItem.Type.BOOTS, 5);
-                attribute.put(ArmorItem.Type.CHESTPLATE, 9);
-                attribute.put(ArmorItem.Type.HELMET, 5);
-                attribute.put(ArmorItem.Type.LEGGINGS, 7);
-                attribute.put(ArmorItem.Type.BODY, 11);
-            }), 16, 2f, .1f, () -> ModItems.TIN_INGOT.get());
+                attribute.put(ArmorItem.Type.BOOTS, 3);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 3);
+                attribute.put(ArmorItem.Type.HELMET, 3);
+                attribute.put(ArmorItem.Type.LEGGINGS, 3);
+                attribute.put(ArmorItem.Type.BODY, 5);
+            }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> ModItems.TIN_INGOT.get());
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
-                                                  int enchantability, float toughness, float knockbackResistance,
+                                                  int enchantability, Holder<SoundEvent> equipSound, float toughness, float knockbackResistance,
                                                   Supplier<Item> ingredientItem) {
         ResourceLocation location = ResourceLocation.fromNamespaceAndPath(SimpleProgression.MODID, name);
-        Holder<SoundEvent> equipSound = SoundEvents.ARMOR_EQUIP_GENERIC;
         Supplier<Ingredient> ingredient = () -> Ingredient.of(ingredientItem.get());
         List<ArmorMaterial.Layer> layers = List.of(new ArmorMaterial.Layer(location));
 

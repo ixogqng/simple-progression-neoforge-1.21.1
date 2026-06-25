@@ -1,7 +1,4 @@
 {
-  "remove": [
-    "#simpleprogression:needs_flint_tool"
-  ],
   "values": [
     "#minecraft:incorrect_for_wooden_tool",
     "minecraft:coal_ore"
