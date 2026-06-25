@@ -1,0 +1,13 @@
+{
+  "type": "simpleprogression:basic_forge",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "simpleprogression:raw_tin"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleprogression:tin_ingot"
+  }
+}

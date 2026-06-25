@@ -17,5 +17,6 @@
   "item.simpleprogression.tin_ingot": "Tin Ingot",
   "item.simpleprogression.raw_tin": "Raw Tin",
   "block.simpleprogression.tin_block": "Block of Tin",
-  "block.simpleprogression.tin_ore": "Tin Ore"
+  "block.simpleprogression.tin_ore": "Tin Ore",
+  "container.simpleprogression.basic_forge": "Basic Forge"
 }

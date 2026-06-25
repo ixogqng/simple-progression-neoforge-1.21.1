@@ -1,6 +1,7 @@
 package net.ixogqng.simpleprogression.block;
 
 import net.ixogqng.simpleprogression.SimpleProgression;
+import net.ixogqng.simpleprogression.block.custom.BasicForgeBlock;
 import net.ixogqng.simpleprogression.item.ModItems;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.BlockItem;
@@ -30,6 +31,9 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(3.0F, 3.0F)
             ));
+
+    public static final DeferredBlock<Block> BASIC_FORGE = registerBlock("basic_forge",
+            () -> new BasicForgeBlock(BlockBehaviour.Properties.of()));
 
     private static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
