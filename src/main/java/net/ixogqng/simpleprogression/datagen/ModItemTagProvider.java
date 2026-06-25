@@ -28,23 +28,28 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.PICKAXES)
                 .add(ModItems.FLINT_PICKAXE.get())
-                .add(ModItems.TIN_PICKAXE.get());
+                .add(ModItems.TIN_PICKAXE.get())
+                .add(ModItems.COPPER_PICKAXE.get());
 
         tag(ItemTags.SWORDS)
                 .add(ModItems.FLINT_SWORD.get())
-                .add(ModItems.TIN_SWORD.get());
+                .add(ModItems.TIN_SWORD.get())
+                .add(ModItems.COPPER_SWORD.get());
 
         tag(ItemTags.HOES)
                 .add(ModItems.FLINT_HOE.get())
-                .add(ModItems.TIN_HOE.get());
+                .add(ModItems.TIN_HOE.get())
+                .add(ModItems.COPPER_HOE.get());
 
         tag(ItemTags.AXES)
                 .add(ModItems.FLINT_AXE.get())
-                .add(ModItems.TIN_AXE.get());
+                .add(ModItems.TIN_AXE.get())
+                .add(ModItems.COPPER_AXE.get());
 
         tag(ItemTags.SHOVELS)
                 .add(ModItems.FLINT_SHOVEL.get())
-                .add(ModItems.TIN_SHOVEL.get());
+                .add(ModItems.TIN_SHOVEL.get())
+                .add(ModItems.COPPER_SHOVEL.get());
 
         tag(ModTags.Items.GOLD_TOOLS)
                 .add(Items.GOLDEN_PICKAXE)
@@ -69,5 +74,23 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.LEG_ARMOR)
                 .add(ModItems.TIN_LEGGINGS.get());
+
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.COPPER_BOOTS.get())
+                .add(ModItems.COPPER_HELMET.get())
+                .add(ModItems.COPPER_LEGGINGS.get())
+                .add(ModItems.COPPER_CHESTPLATE.get());
+
+        tag(ItemTags.HEAD_ARMOR)
+                .add(ModItems.COPPER_HELMET.get());
+
+        tag(ItemTags.FOOT_ARMOR)
+                .add(ModItems.COPPER_BOOTS.get());
+
+        tag(ItemTags.CHEST_ARMOR)
+                .add(ModItems.COPPER_CHESTPLATE.get());
+
+        tag(ItemTags.LEG_ARMOR)
+                .add(ModItems.COPPER_LEGGINGS.get());
     }
 }

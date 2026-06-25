@@ -121,6 +121,35 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_TIN = ITEMS.register("raw_tin",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<PickaxeItem> COPPER_PICKAXE = ITEMS.register("copper_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.COPPER,
+                    new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.COPPER, 1, -2.8f))));
+    public static final DeferredItem<SwordItem> COPPER_SWORD = ITEMS.register("copper_sword",
+            () -> new SwordItem(ModToolTiers.COPPER,
+                    new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.COPPER, 3.0f, -2.4f))));
+    public static final DeferredItem<HoeItem> COPPER_HOE = ITEMS.register("copper_hoe",
+            () -> new HoeItem(ModToolTiers.COPPER,
+                    new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.COPPER, -1.0f, -2.0f))));
+    public static final DeferredItem<AxeItem> COPPER_AXE = ITEMS.register("copper_axe",
+            () -> new AxeItem(ModToolTiers.COPPER,
+                    new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.COPPER, 7.0f, -3.2f))));
+    public static final DeferredItem<ShovelItem> COPPER_SHOVEL = ITEMS.register("copper_shovel",
+            () -> new ShovelItem(ModToolTiers.COPPER,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.COPPER, 1.5f, -3.0f))));
+    public static final DeferredItem<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet",
+            () -> new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
+                    .durability(ArmorItem.Type.HELMET.getDurability(11))));
+    public static final DeferredItem<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots",
+            () -> new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties()
+                    .durability(ArmorItem.Type.BOOTS.getDurability(11))));
+    public static final DeferredItem<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()
+                    .durability(ArmorItem.Type.CHESTPLATE.getDurability(11))));
+    public static final DeferredItem<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings",
+            () -> new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
+                    .durability(ArmorItem.Type.LEGGINGS.getDurability(11))));
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

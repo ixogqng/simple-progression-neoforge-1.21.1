@@ -11,6 +11,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.EnumMap;
@@ -25,7 +26,16 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.HELMET, 3);
                 attribute.put(ArmorItem.Type.LEGGINGS, 3);
                 attribute.put(ArmorItem.Type.BODY, 5);
-            }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> ModItems.TIN_INGOT.get());
+            }), 8, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> ModItems.TIN_INGOT.get());
+
+    public static final Holder<ArmorMaterial> COPPER_ARMOR_MATERIAL = register("copper",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 1);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 4);
+                attribute.put(ArmorItem.Type.HELMET, 2);
+                attribute.put(ArmorItem.Type.LEGGINGS, 3);
+                attribute.put(ArmorItem.Type.BODY, 4);
+            }), 8, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Items.COPPER_INGOT);
 
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, Holder<SoundEvent> equipSound, float toughness, float knockbackResistance,

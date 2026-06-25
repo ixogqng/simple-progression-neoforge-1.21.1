@@ -149,5 +149,72 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         )
                 .unlockedBy("has_raw_tin", has(ModItems.RAW_TIN))
                 .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COPPER_PICKAXE.get())
+                .pattern("FFF")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('F', Items.COPPER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_flint", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COPPER_AXE.get())
+                .pattern("FF")
+                .pattern("FS")
+                .pattern(" S")
+                .define('F', Items.COPPER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_flint", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COPPER_HOE.get())
+                .pattern("FF")
+                .pattern(" S")
+                .pattern(" S")
+                .define('F', Items.COPPER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_flint", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COPPER_SHOVEL.get())
+                .pattern(" F ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('F', Items.COPPER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_flint", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.COPPER_SWORD.get())
+                .pattern(" F ")
+                .pattern(" F ")
+                .pattern(" S ")
+                .define('F', Items.COPPER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_flint", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.COPPER_BOOTS.get())
+                .pattern("F F")
+                .pattern("F F")
+                .define('F', Items.COPPER_INGOT)
+                .unlockedBy("has_tin_ingot", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.COPPER_LEGGINGS.get())
+                .pattern("FFF")
+                .pattern("F F")
+                .pattern("F F")
+                .define('F', Items.COPPER_INGOT)
+                .unlockedBy("has_tin_ingot", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.COPPER_CHESTPLATE.get())
+                .pattern("F F")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', Items.COPPER_INGOT)
+                .unlockedBy("has_tin_ingot", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.COPPER_HELMET.get())
+                .pattern("FFF")
+                .pattern("F F")
+                .define('F', Items.COPPER_INGOT)
+                .unlockedBy("has_tin_ingot", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
     }
 }

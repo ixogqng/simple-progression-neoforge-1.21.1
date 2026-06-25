@@ -96,6 +96,15 @@ public class SimpleProgression {
             event.accept(ModBlocks.TIN_ORE);
             event.accept(ModBlocks.BASIC_FORGE);
             event.accept(ModItems.RAW_TIN);
+            event.accept(ModItems.COPPER_PICKAXE);
+            event.accept(ModItems.COPPER_SWORD);
+            event.accept(ModItems.COPPER_AXE);
+            event.accept(ModItems.COPPER_HOE);
+            event.accept(ModItems.COPPER_SHOVEL);
+            event.accept(ModItems.COPPER_HELMET);
+            event.accept(ModItems.COPPER_CHESTPLATE);
+            event.accept(ModItems.COPPER_LEGGINGS);
+            event.accept(ModItems.COPPER_BOOTS);
         }
     }
 

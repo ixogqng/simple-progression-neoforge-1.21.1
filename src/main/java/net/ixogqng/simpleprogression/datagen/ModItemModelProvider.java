@@ -102,5 +102,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.TIN_AXE.get());
         handheldItem(ModItems.TIN_SHOVEL.get());
         handheldItem(ModItems.RAW_TIN.get());
+        handheldItem(ModItems.COPPER_PICKAXE.get());
+        handheldItem(ModItems.COPPER_SWORD.get());
+        handheldItem(ModItems.COPPER_HOE.get());
+        handheldItem(ModItems.COPPER_AXE.get());
+        handheldItem(ModItems.COPPER_SHOVEL.get());
+        trimmedArmorItem(ModItems.COPPER_HELMET);
+        trimmedArmorItem(ModItems.COPPER_BOOTS);
+        trimmedArmorItem(ModItems.COPPER_LEGGINGS);
+        trimmedArmorItem(ModItems.COPPER_CHESTPLATE);
     }
 }
