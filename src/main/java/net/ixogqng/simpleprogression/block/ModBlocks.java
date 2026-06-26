@@ -1,6 +1,7 @@
 package net.ixogqng.simpleprogression.block;
 
 import net.ixogqng.simpleprogression.SimpleProgression;
+import net.ixogqng.simpleprogression.block.custom.AdvancedForgeBlock;
 import net.ixogqng.simpleprogression.block.custom.BasicForgeBlock;
 import net.ixogqng.simpleprogression.item.ModItems;
 import net.minecraft.util.valueproviders.ConstantInt;
@@ -34,6 +35,13 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BASIC_FORGE = registerBlock("basic_forge",
             () -> new BasicForgeBlock(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> ADVANCED_FORGE = registerBlock("advanced_forge",
+            () -> new AdvancedForgeBlock(BlockBehaviour.Properties.of()));
+
+    public static final DeferredBlock<Block> BRONZE_BLOCK = registerBlock("bronze_block",
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.METAL)
+            ));
 
     private static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -37,6 +37,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.TIN_BLOCK.get());
         dropSelf(ModBlocks.BASIC_FORGE.get());
+        dropSelf(ModBlocks.ADVANCED_FORGE.get());
+        dropSelf(ModBlocks.BRONZE_BLOCK.get());
 
         add(ModBlocks.TIN_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.TIN_ORE.get(), ModItems.RAW_TIN.get(), 2.0f, 5.0f));

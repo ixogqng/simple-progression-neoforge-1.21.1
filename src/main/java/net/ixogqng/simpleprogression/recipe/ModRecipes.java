@@ -28,6 +28,19 @@ public class ModRecipes {
                 }
             });
 
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<AdvancedForgeRecipe>> ADVANCED_FORGE_SERIALIZER =
+            SERIALIZERS.register("advanced_forge", () -> new SimpleCookingSerializer<>(
+                    AdvancedForgeRecipe::new, 200
+            ));
+
+    public static final DeferredHolder<RecipeType<?>, RecipeType<AdvancedForgeRecipe>> ADVANCED_FORGE_TYPE =
+            TYPES.register("advanced_forge", () -> new RecipeType<AdvancedForgeRecipe>() {
+                @Override
+                public String toString() {
+                    return "simpleprogression:advanced_forge";
+                }
+            });
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
         TYPES.register(eventBus);

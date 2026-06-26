@@ -16,6 +16,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.TIN_BLOCK);
         blockWithItem(ModBlocks.TIN_ORE);
+        blockWithItem(ModBlocks.BRONZE_BLOCK);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

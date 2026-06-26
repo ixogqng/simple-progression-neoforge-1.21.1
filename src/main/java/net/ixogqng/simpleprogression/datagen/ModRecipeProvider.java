@@ -2,6 +2,7 @@ package net.ixogqng.simpleprogression.datagen;
 
 import net.ixogqng.simpleprogression.block.ModBlocks;
 import net.ixogqng.simpleprogression.item.ModItems;
+import net.ixogqng.simpleprogression.recipe.AdvancedForgeRecipeBuilder;
 import net.ixogqng.simpleprogression.recipe.BasicForgeRecipeBuilder;
 import net.ixogqng.simpleprogression.recipe.ModRecipes;
 import net.minecraft.core.HolderLookup;
@@ -302,5 +303,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', ModItems.BRONZE_INGOT)
                 .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
                 .save(recipeOutput);
+        AdvancedForgeRecipeBuilder.create(
+                        Ingredient.of(Items.COPPER_INGOT),
+                        CookingBookCategory.MISC,
+                        ModItems.TIN_INGOT.get(),
+                        0.7f,
+                        200
+                )
+                .unlockedBy("has_raw_tin", has(ModItems.RAW_TIN))
+                .save(recipeOutput, "test_recipe");
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BRONZE_BLOCK.get())
+                .pattern("FFF")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', ModItems.BRONZE_INGOT)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BRONZE_INGOT.get())
+                .requires(ModBlocks.BRONZE_BLOCK)
+                .unlockedBy("has_bronze_block", has(ModBlocks.BRONZE_BLOCK))
+                .save(recipeOutput, "bronze_ingot_from_bronze_block");
     }
 }

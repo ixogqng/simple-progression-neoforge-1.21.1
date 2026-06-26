@@ -4,6 +4,7 @@ import net.ixogqng.simpleprogression.SimpleProgression;
 import net.ixogqng.simpleprogression.client.gui.screens.recipebook.BasicForgeRecipeBookComponent;
 import net.ixogqng.simpleprogression.recipe.ModRecipes;
 import net.ixogqng.simpleprogression.screen.ModMenuTypes;
+import net.ixogqng.simpleprogression.screen.custom.AdvancedForgeMenu;
 import net.ixogqng.simpleprogression.screen.custom.BasicForgeMenu;
 import net.minecraft.client.RecipeBookCategories;
 import net.minecraft.client.gui.components.ImageButton;
@@ -25,6 +26,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.BASIC_FORGE_MENU.get(), BasicForgeScreen::new);
+        event.register(ModMenuTypes.ADVANCED_FORGE_MENU.get(), AdvancedForgeScreen::new);
     }
 
     private static class BasicForgeScreen extends AbstractFurnaceScreen<BasicForgeMenu> {
@@ -38,10 +40,21 @@ public class ClientModEvents {
         }
     }
 
+    private static class AdvancedForgeScreen extends AbstractFurnaceScreen<AdvancedForgeMenu> {
+
+        private static final ResourceLocation LIT_PROGRESS_SPRITE = ResourceLocation.withDefaultNamespace("container/furnace/lit_progress");
+        private static final ResourceLocation BURN_PROGRESS_SPRITE = ResourceLocation.withDefaultNamespace("container/furnace/burn_progress");
+        private static final ResourceLocation TEXTURE = ResourceLocation.withDefaultNamespace("textures/gui/container/furnace.png");
+
+        public AdvancedForgeScreen(AdvancedForgeMenu menu, Inventory playerInventory, Component title) {
+            super(menu, new BasicForgeRecipeBookComponent(), playerInventory, title, TEXTURE, LIT_PROGRESS_SPRITE, BURN_PROGRESS_SPRITE);
+        }
+    }
+
     @SubscribeEvent
     public static void onScreenInit(ScreenEvent.Init.Post event) {
         if (event.getScreen() instanceof AbstractFurnaceScreen<?> screen) {
-            if (screen.getMenu() instanceof BasicForgeMenu) {
+            if (screen.getMenu() instanceof BasicForgeMenu || screen.getMenu() instanceof AdvancedForgeMenu) {
                 for (var widget : event.getListenersList()) {
                     if (widget instanceof ImageButton button) {
                         button.visible = false;

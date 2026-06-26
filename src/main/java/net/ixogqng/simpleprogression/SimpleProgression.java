@@ -117,6 +117,8 @@ public class SimpleProgression {
             event.accept(ModItems.BRONZE_CHESTPLATE);
             event.accept(ModItems.BRONZE_LEGGINGS);
             event.accept(ModItems.BRONZE_BOOTS);
+            event.accept(ModBlocks.ADVANCED_FORGE);
+            event.accept(ModBlocks.BRONZE_BLOCK);
         }
     }
 

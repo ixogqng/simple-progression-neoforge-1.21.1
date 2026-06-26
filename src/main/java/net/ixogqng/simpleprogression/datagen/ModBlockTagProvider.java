@@ -59,7 +59,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIN_BLOCK.get())
-                .add(ModBlocks.TIN_ORE.get());
+                .add(ModBlocks.TIN_ORE.get())
+                .add(ModBlocks.BRONZE_BLOCK.get());
 
         tag(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)

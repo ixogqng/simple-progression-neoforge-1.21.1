@@ -1,6 +1,7 @@
 package net.ixogqng.simpleprogression.screen;
 
 import net.ixogqng.simpleprogression.SimpleProgression;
+import net.ixogqng.simpleprogression.screen.custom.AdvancedForgeMenu;
 import net.ixogqng.simpleprogression.screen.custom.BasicForgeMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.flag.FeatureFlags;
@@ -18,6 +19,11 @@ public class ModMenuTypes {
     public static final DeferredHolder<MenuType<?>, MenuType<BasicForgeMenu>> BASIC_FORGE_MENU =
             MENUS.register("basic_forge_menu", () ->
                     new MenuType<>(BasicForgeMenu::new, FeatureFlags.REGISTRY.allFlags()));
+
+    public static final DeferredHolder<MenuType<?>, MenuType<AdvancedForgeMenu>> ADVANCED_FORGE_MENU =
+            MENUS.register("advanced_forge_menu", () ->
+                    new MenuType<>(AdvancedForgeMenu::new, FeatureFlags.REGISTRY.allFlags()));
+
     public static void register(IEventBus eventBus) {
         MENUS.register(eventBus);
     }
