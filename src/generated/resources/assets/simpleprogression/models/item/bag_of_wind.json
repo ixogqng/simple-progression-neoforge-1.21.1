@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "simpleprogression:item/bag_of_wind"
+  }
+}

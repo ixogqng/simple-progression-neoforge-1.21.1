@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "simpleprogression:bronze_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "FFF",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleprogression:bronze_pickaxe"
+  }
+}

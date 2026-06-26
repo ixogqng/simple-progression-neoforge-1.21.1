@@ -1,6 +1,7 @@
 package net.ixogqng.simpleprogression.item;
 
 import net.ixogqng.simpleprogression.SimpleProgression;
+import net.ixogqng.simpleprogression.item.custom.PaxelItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -149,6 +150,42 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
                     .durability(ArmorItem.Type.LEGGINGS.getDurability(11))));
 
+    public static final DeferredItem<WindChargeItem> BAG_OF_WIND = ITEMS.register("bag_of_wind",
+            () -> new WindChargeItem(new Item.Properties()));
+
+    public static final DeferredItem<PaxelItem> DIAMOND_PAXEL = ITEMS.register("diamond_paxel",
+            () -> new PaxelItem(Tiers.DIAMOND,
+                    new Item.Properties().attributes(PaxelItem.createAttributes(Tiers.DIAMOND, 1, -2.8f))));
+
+    public static final DeferredItem<PickaxeItem> BRONZE_PICKAXE = ITEMS.register("bronze_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.BRONZE,
+                    new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.BRONZE, 1, -2.8f))));
+    public static final DeferredItem<SwordItem> BRONZE_SWORD = ITEMS.register("bronze_sword",
+            () -> new SwordItem(ModToolTiers.BRONZE,
+                    new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.BRONZE, 3.0f, -2.4f))));
+    public static final DeferredItem<HoeItem> BRONZE_HOE = ITEMS.register("bronze_hoe",
+            () -> new HoeItem(ModToolTiers.BRONZE,
+                    new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.BRONZE, -2.0f, -1.0f))));
+    public static final DeferredItem<AxeItem> BRONZE_AXE = ITEMS.register("bronze_axe",
+            () -> new AxeItem(ModToolTiers.BRONZE,
+                    new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.BRONZE, 6.0f, -3.1f))));
+    public static final DeferredItem<ShovelItem> BRONZE_SHOVEL = ITEMS.register("bronze_shovel",
+            () -> new ShovelItem(ModToolTiers.BRONZE,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.BRONZE, 1.5f, -3.0f))));
+    public static final DeferredItem<Item> BRONZE_INGOT = ITEMS.register("bronze_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<ArmorItem> BRONZE_HELMET = ITEMS.register("bronze_helmet",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
+                    .durability(ArmorItem.Type.HELMET.getDurability(25))));
+    public static final DeferredItem<ArmorItem> BRONZE_BOOTS = ITEMS.register("bronze_boots",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties()
+                    .durability(ArmorItem.Type.BOOTS.getDurability(25))));
+    public static final DeferredItem<ArmorItem> BRONZE_CHESTPLATE = ITEMS.register("bronze_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()
+                    .durability(ArmorItem.Type.CHESTPLATE.getDurability(25))));
+    public static final DeferredItem<ArmorItem> BRONZE_LEGGINGS = ITEMS.register("bronze_leggings",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
+                    .durability(ArmorItem.Type.LEGGINGS.getDurability(25))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

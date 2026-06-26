@@ -28,6 +28,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
 
+        tag(ModTags.Blocks.MINEABLE_WITH_PAXEL)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .addTag(BlockTags.MINEABLE_WITH_AXE);
+
+        tag(ModTags.Blocks.CAN_HAVE_PATH)
+                .add(Blocks.DIRT)
+                .add(Blocks.GRASS_BLOCK)
+                .add(Blocks.MYCELIUM)
+                .add(Blocks.COARSE_DIRT)
+                .add(Blocks.PODZOL)
+                .add(Blocks.ROOTED_DIRT);
+
         tag(ModTags.Blocks.NEEDS_TIN_TOOL)
                 .addTag(BlockTags.NEEDS_STONE_TOOL);
 
@@ -47,5 +60,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIN_BLOCK.get())
                 .add(ModBlocks.TIN_ORE.get());
+
+        tag(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_BRONZE_TOOL);
+
+        tag(ModTags.Blocks.NEEDS_BRONZE_TOOL)
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
     }
 }

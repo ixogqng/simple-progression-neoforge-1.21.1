@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecraft:clay"
+    },
+    "K": {
+      "item": "simpleprogression:kindling"
+    },
+    "W": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "pattern": [
+    "FFF",
+    "FKF",
+    "FWF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleprogression:basic_forge"
+  }
+}

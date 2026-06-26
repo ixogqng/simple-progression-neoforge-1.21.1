@@ -111,5 +111,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.COPPER_BOOTS);
         trimmedArmorItem(ModItems.COPPER_LEGGINGS);
         trimmedArmorItem(ModItems.COPPER_CHESTPLATE);
+        handheldItem(ModItems.BAG_OF_WIND.get());
+        handheldItem(ModItems.DIAMOND_PAXEL.get());
+        handheldItem(ModItems.BRONZE_PICKAXE.get());
+        handheldItem(ModItems.BRONZE_SWORD.get());
+        handheldItem(ModItems.BRONZE_HOE.get());
+        handheldItem(ModItems.BRONZE_AXE.get());
+        handheldItem(ModItems.BRONZE_SHOVEL.get());
+        handheldItem(ModItems.BRONZE_INGOT.get());
+        trimmedArmorItem(ModItems.BRONZE_HELMET);
+        trimmedArmorItem(ModItems.BRONZE_BOOTS);
+        trimmedArmorItem(ModItems.BRONZE_LEGGINGS);
+        trimmedArmorItem(ModItems.BRONZE_CHESTPLATE);
     }
 }

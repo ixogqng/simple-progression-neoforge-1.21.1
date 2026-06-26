@@ -7,10 +7,12 @@ import net.ixogqng.simpleprogression.recipe.ModRecipes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.ShapelessRecipe;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.concurrent.CompletableFuture;
@@ -215,6 +217,90 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("F F")
                 .define('F', Items.COPPER_INGOT)
                 .unlockedBy("has_tin_ingot", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BASIC_FORGE)
+                .pattern("FFF")
+                .pattern("FKF")
+                .pattern("FWF")
+                .define('F', Blocks.CLAY)
+                .define('K', ModItems.KINDLING)
+                .define('W', ItemTags.LOGS)
+                .unlockedBy("has_kindling", has(ModItems.KINDLING))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.FURNACE)
+                .pattern("FFF")
+                .pattern("FCF")
+                .pattern("FFF")
+                .define('F', Items.COBBLESTONE)
+                .define('C', Items.COAL)
+                .unlockedBy("has_coal", has(Items.COAL))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BRONZE_PICKAXE.get())
+                .pattern("FFF")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('F', ModItems.BRONZE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BRONZE_AXE.get())
+                .pattern("FF")
+                .pattern("FS")
+                .pattern(" S")
+                .define('F', ModItems.BRONZE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BRONZE_HOE.get())
+                .pattern("FF")
+                .pattern(" S")
+                .pattern(" S")
+                .define('F', ModItems.BRONZE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BRONZE_SHOVEL.get())
+                .pattern(" F ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('F', ModItems.BRONZE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BRONZE_SWORD.get())
+                .pattern(" F ")
+                .pattern(" F ")
+                .pattern(" S ")
+                .define('F', ModItems.BRONZE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BRONZE_BOOTS.get())
+                .pattern("F F")
+                .pattern("F F")
+                .define('F', ModItems.BRONZE_INGOT)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BRONZE_LEGGINGS.get())
+                .pattern("FFF")
+                .pattern("F F")
+                .pattern("F F")
+                .define('F', ModItems.BRONZE_INGOT)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BRONZE_CHESTPLATE.get())
+                .pattern("F F")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', ModItems.BRONZE_INGOT)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BRONZE_HELMET.get())
+                .pattern("FFF")
+                .pattern("F F")
+                .define('F', ModItems.BRONZE_INGOT)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
                 .save(recipeOutput);
     }
 }

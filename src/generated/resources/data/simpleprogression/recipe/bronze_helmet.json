@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "item": "simpleprogression:bronze_ingot"
+    }
+  },
+  "pattern": [
+    "FFF",
+    "F F"
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleprogression:bronze_helmet"
+  }
+}

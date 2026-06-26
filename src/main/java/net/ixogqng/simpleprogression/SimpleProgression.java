@@ -105,6 +105,18 @@ public class SimpleProgression {
             event.accept(ModItems.COPPER_CHESTPLATE);
             event.accept(ModItems.COPPER_LEGGINGS);
             event.accept(ModItems.COPPER_BOOTS);
+            event.accept(ModItems.BAG_OF_WIND);
+            event.accept(ModItems.DIAMOND_PAXEL);
+            event.accept(ModItems.BRONZE_PICKAXE);
+            event.accept(ModItems.BRONZE_SWORD);
+            event.accept(ModItems.BRONZE_AXE);
+            event.accept(ModItems.BRONZE_HOE);
+            event.accept(ModItems.BRONZE_SHOVEL);
+            event.accept(ModItems.BRONZE_INGOT);
+            event.accept(ModItems.BRONZE_HELMET);
+            event.accept(ModItems.BRONZE_CHESTPLATE);
+            event.accept(ModItems.BRONZE_LEGGINGS);
+            event.accept(ModItems.BRONZE_BOOTS);
         }
     }
 
