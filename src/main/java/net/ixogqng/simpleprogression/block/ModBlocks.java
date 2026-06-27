@@ -32,6 +32,9 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(3.0F, 3.0F)
             ));
+    public static final DeferredBlock<Block> RAW_TIN_BLOCK = registerBlock("raw_tin_block",
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE).requiresCorrectToolForDrops().strength(3.0F, 6.0F)
+            ));
 
     public static final DeferredBlock<Block> BASIC_FORGE = registerBlock("basic_forge",
             () -> new BasicForgeBlock(BlockBehaviour.Properties.of()));
@@ -41,6 +44,20 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BRONZE_BLOCK = registerBlock("bronze_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.METAL)
+            ));
+
+    public static final DeferredBlock<Block> ECLIPSITE_BLOCK = registerBlock("eclipsite_block",
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.NETHERITE_BLOCK)
+            ));
+    public static final DeferredBlock<Block> RAW_ECLIPSITE_BLOCK = registerBlock("raw_eclipsite_block",
+            () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).requiresCorrectToolForDrops().strength(3.0F, 6.0F)
+            ));
+    public static final DeferredBlock<Block> ECLIPSITE_ORE = registerBlock("eclipsite_ore",
+            () -> new DropExperienceBlock(ConstantInt.of(0), BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F)
             ));
 
     private static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

@@ -59,8 +59,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.TIN_BLOCK.get())
+                .add(ModBlocks.RAW_TIN_BLOCK.get())
                 .add(ModBlocks.TIN_ORE.get())
-                .add(ModBlocks.BRONZE_BLOCK.get());
+                .add(ModBlocks.BRONZE_BLOCK.get())
+                .add(ModBlocks.RAW_ECLIPSITE_BLOCK.get())
+                .add(ModBlocks.ECLIPSITE_BLOCK.get())
+                .add(ModBlocks.ECLIPSITE_ORE.get());
 
         tag(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -68,5 +72,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(ModTags.Blocks.NEEDS_BRONZE_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(ModBlocks.ECLIPSITE_ORE.get());
     }
 }

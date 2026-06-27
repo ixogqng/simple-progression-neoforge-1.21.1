@@ -2,6 +2,8 @@ package net.ixogqng.simpleprogression.item;
 
 import net.ixogqng.simpleprogression.SimpleProgression;
 import net.ixogqng.simpleprogression.item.custom.PaxelItem;
+import net.ixogqng.simpleprogression.item.custom.SilverPickaxeItem;
+import net.ixogqng.simpleprogression.item.custom.SilverShovelItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -186,6 +188,45 @@ public class ModItems {
     public static final DeferredItem<ArmorItem> BRONZE_LEGGINGS = ITEMS.register("bronze_leggings",
             () -> new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
                     .durability(ArmorItem.Type.LEGGINGS.getDurability(25))));
+
+    public static final DeferredItem<PickaxeItem> ECLIPSITE_PICKAXE = ITEMS.register("eclipsite_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.ECLIPSITE,
+                    new Item.Properties().attributes(PickaxeItem.createAttributes(ModToolTiers.ECLIPSITE, 1, -2.8f))));
+    public static final DeferredItem<SwordItem> ECLIPSITE_SWORD = ITEMS.register("eclipsite_sword",
+            () -> new SwordItem(ModToolTiers.ECLIPSITE,
+                    new Item.Properties().attributes(SwordItem.createAttributes(ModToolTiers.ECLIPSITE, 3.0f, -2.4f))));
+    public static final DeferredItem<HoeItem> ECLIPSITE_HOE = ITEMS.register("eclipsite_hoe",
+            () -> new HoeItem(ModToolTiers.ECLIPSITE,
+                    new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.ECLIPSITE, -4.0f, 0.0f))));
+    public static final DeferredItem<AxeItem> ECLIPSITE_AXE = ITEMS.register("eclipsite_axe",
+            () -> new AxeItem(ModToolTiers.ECLIPSITE,
+                    new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.ECLIPSITE, 5.0f, -3.0f))));
+    public static final DeferredItem<ShovelItem> ECLIPSITE_SHOVEL = ITEMS.register("eclipsite_shovel",
+            () -> new ShovelItem(ModToolTiers.ECLIPSITE,
+                    new Item.Properties().attributes(ShovelItem.createAttributes(ModToolTiers.ECLIPSITE, 1.5f, -3.0f))));
+    public static final DeferredItem<Item> RAW_ECLIPSITE = ITEMS.register("raw_eclipsite",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ECLIPSITE_INGOT = ITEMS.register("eclipsite_ingot",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<ArmorItem> ECLIPSITE_HELMET = ITEMS.register("eclipsite_helmet",
+            () -> new ArmorItem(ModArmorMaterials.ECLIPSITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
+                    .durability(ArmorItem.Type.HELMET.getDurability(37))));
+    public static final DeferredItem<ArmorItem> ECLIPSITE_BOOTS = ITEMS.register("eclipsite_boots",
+            () -> new ArmorItem(ModArmorMaterials.ECLIPSITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties()
+                    .durability(ArmorItem.Type.BOOTS.getDurability(37))));
+    public static final DeferredItem<ArmorItem> ECLIPSITE_CHESTPLATE = ITEMS.register("eclipsite_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.ECLIPSITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties()
+                    .durability(ArmorItem.Type.CHESTPLATE.getDurability(37))));
+    public static final DeferredItem<ArmorItem> ECLIPSITE_LEGGINGS = ITEMS.register("eclipsite_leggings",
+            () -> new ArmorItem(ModArmorMaterials.ECLIPSITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties()
+                    .durability(ArmorItem.Type.LEGGINGS.getDurability(37))));
+
+    public static final DeferredItem<SilverPickaxeItem> SILVER_PICKAXE = ITEMS.register("silver_pickaxe",
+            () -> new SilverPickaxeItem(ModToolTiers.ECLIPSITE,
+                    new Item.Properties().attributes(SilverPickaxeItem.createAttributes(ModToolTiers.ECLIPSITE, 1, -2.8f))));
+    public static final DeferredItem<SilverShovelItem> SILVER_SHOVEL = ITEMS.register("silver_shovel",
+            () -> new SilverShovelItem(ModToolTiers.ECLIPSITE,
+                    new Item.Properties().attributes(SilverShovelItem.createAttributes(ModToolTiers.ECLIPSITE, 1.5f, -3.0f))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

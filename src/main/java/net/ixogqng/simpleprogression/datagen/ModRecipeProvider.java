@@ -303,15 +303,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', ModItems.BRONZE_INGOT)
                 .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
                 .save(recipeOutput);
-        AdvancedForgeRecipeBuilder.create(
-                        Ingredient.of(Items.COPPER_INGOT),
-                        CookingBookCategory.MISC,
-                        ModItems.TIN_INGOT.get(),
-                        0.7f,
-                        200
-                )
-                .unlockedBy("has_raw_tin", has(ModItems.RAW_TIN))
-                .save(recipeOutput, "test_recipe");
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BRONZE_BLOCK.get())
                 .pattern("FFF")
                 .pattern("FFF")
@@ -323,5 +314,72 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.BRONZE_BLOCK)
                 .unlockedBy("has_bronze_block", has(ModBlocks.BRONZE_BLOCK))
                 .save(recipeOutput, "bronze_ingot_from_bronze_block");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ECLIPSITE_PICKAXE.get())
+                .pattern("FFF")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ECLIPSITE_AXE.get())
+                .pattern("FF")
+                .pattern("FS")
+                .pattern(" S")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ECLIPSITE_HOE.get())
+                .pattern("FF")
+                .pattern(" S")
+                .pattern(" S")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ECLIPSITE_SHOVEL.get())
+                .pattern(" F ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ECLIPSITE_SWORD.get())
+                .pattern(" F ")
+                .pattern(" F ")
+                .pattern(" S ")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ECLIPSITE_BOOTS.get())
+                .pattern("F F")
+                .pattern("F F")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ECLIPSITE_LEGGINGS.get())
+                .pattern("FFF")
+                .pattern("F F")
+                .pattern("F F")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ECLIPSITE_CHESTPLATE.get())
+                .pattern("F F")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ECLIPSITE_HELMET.get())
+                .pattern("FFF")
+                .pattern("F F")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
     }
 }

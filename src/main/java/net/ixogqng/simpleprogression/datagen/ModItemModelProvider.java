@@ -91,7 +91,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.FLINT_AXE.get());
         handheldItem(ModItems.FLINT_SHOVEL.get());
 
-        handheldItem(ModItems.TIN_INGOT.get());
+        basicItem(ModItems.TIN_INGOT.get());
         trimmedArmorItem(ModItems.TIN_HELMET);
         trimmedArmorItem(ModItems.TIN_BOOTS);
         trimmedArmorItem(ModItems.TIN_LEGGINGS);
@@ -101,7 +101,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.TIN_HOE.get());
         handheldItem(ModItems.TIN_AXE.get());
         handheldItem(ModItems.TIN_SHOVEL.get());
-        handheldItem(ModItems.RAW_TIN.get());
+        basicItem(ModItems.RAW_TIN.get());
         handheldItem(ModItems.COPPER_PICKAXE.get());
         handheldItem(ModItems.COPPER_SWORD.get());
         handheldItem(ModItems.COPPER_HOE.get());
@@ -111,17 +111,30 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.COPPER_BOOTS);
         trimmedArmorItem(ModItems.COPPER_LEGGINGS);
         trimmedArmorItem(ModItems.COPPER_CHESTPLATE);
-        handheldItem(ModItems.BAG_OF_WIND.get());
+        basicItem(ModItems.BAG_OF_WIND.get());
         handheldItem(ModItems.DIAMOND_PAXEL.get());
         handheldItem(ModItems.BRONZE_PICKAXE.get());
         handheldItem(ModItems.BRONZE_SWORD.get());
         handheldItem(ModItems.BRONZE_HOE.get());
         handheldItem(ModItems.BRONZE_AXE.get());
         handheldItem(ModItems.BRONZE_SHOVEL.get());
-        handheldItem(ModItems.BRONZE_INGOT.get());
+        basicItem(ModItems.BRONZE_INGOT.get());
         trimmedArmorItem(ModItems.BRONZE_HELMET);
         trimmedArmorItem(ModItems.BRONZE_BOOTS);
         trimmedArmorItem(ModItems.BRONZE_LEGGINGS);
         trimmedArmorItem(ModItems.BRONZE_CHESTPLATE);
+        handheldItem(ModItems.ECLIPSITE_PICKAXE.get());
+        handheldItem(ModItems.ECLIPSITE_SWORD.get());
+        handheldItem(ModItems.ECLIPSITE_AXE.get());
+        handheldItem(ModItems.ECLIPSITE_HOE.get());
+        handheldItem(ModItems.ECLIPSITE_SHOVEL.get());
+        basicItem(ModItems.RAW_ECLIPSITE.get());
+        basicItem(ModItems.ECLIPSITE_INGOT.get());
+        trimmedArmorItem(ModItems.ECLIPSITE_HELMET);
+        trimmedArmorItem(ModItems.ECLIPSITE_BOOTS);
+        trimmedArmorItem(ModItems.ECLIPSITE_LEGGINGS);
+        trimmedArmorItem(ModItems.ECLIPSITE_CHESTPLATE);
+        handheldItem(ModItems.SILVER_PICKAXE.get());
+        handheldItem(ModItems.SILVER_SHOVEL.get());
     }
 }

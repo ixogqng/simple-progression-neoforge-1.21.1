@@ -15,4 +15,6 @@ public class ModToolTiers {
             190, 5.0f, 1.0f, 13, () -> Ingredient.of(Items.COPPER_INGOT));
     public static final Tier BRONZE = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_BRONZE_TOOL,
             750, 6.0f, 2.0f, 5, () -> Ingredient.of(ModItems.BRONZE_INGOT.get()));
+    public static final Tier ECLIPSITE = new SimpleTier(ModTags.Blocks.INCORRECT_FOR_ECLIPSITE_TOOL,
+            2031, 9.0f, 4.0f, 15, () -> Ingredient.of(ModItems.ECLIPSITE_INGOT.get()));
 }

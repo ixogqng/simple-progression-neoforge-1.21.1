@@ -54,9 +54,6 @@ public class PaxelItem extends DiggerItem {
         BlockState blockstate = level.getBlockState(blockpos);
         Player player = context.getPlayer();
         if (context.getClickedFace() != Direction.DOWN) {
-            SimpleProgression.LOGGER.info("blockstate is " + blockstate);
-            SimpleProgression.LOGGER.info("Is block above air? " + level.getBlockState(blockpos.above()).isAir());
-            SimpleProgression.LOGGER.info("Is block capable of pathing? " + blockstate.is(ModTags.Blocks.CAN_HAVE_PATH));
             if (level.getBlockState(blockpos.above()).isAir() && blockstate.is(ModTags.Blocks.CAN_HAVE_PATH)) {
                 level.playSound(player, blockpos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1.0F, 1.0F);
                 if (!level.isClientSide) {

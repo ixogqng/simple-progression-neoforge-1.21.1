@@ -119,6 +119,23 @@ public class SimpleProgression {
             event.accept(ModItems.BRONZE_BOOTS);
             event.accept(ModBlocks.ADVANCED_FORGE);
             event.accept(ModBlocks.BRONZE_BLOCK);
+            event.accept(ModItems.ECLIPSITE_PICKAXE);
+            event.accept(ModItems.ECLIPSITE_SWORD);
+            event.accept(ModItems.ECLIPSITE_AXE);
+            event.accept(ModItems.ECLIPSITE_HOE);
+            event.accept(ModItems.ECLIPSITE_SHOVEL);
+            event.accept(ModItems.RAW_ECLIPSITE);
+            event.accept(ModItems.ECLIPSITE_INGOT);
+            event.accept(ModItems.ECLIPSITE_HELMET);
+            event.accept(ModItems.ECLIPSITE_CHESTPLATE);
+            event.accept(ModItems.ECLIPSITE_LEGGINGS);
+            event.accept(ModItems.ECLIPSITE_BOOTS);
+            event.accept(ModBlocks.RAW_TIN_BLOCK);
+            event.accept(ModBlocks.ECLIPSITE_ORE);
+            event.accept(ModBlocks.ECLIPSITE_BLOCK);
+            event.accept(ModBlocks.RAW_ECLIPSITE_BLOCK);
+            event.accept(ModItems.SILVER_PICKAXE);
+            event.accept(ModItems.SILVER_SHOVEL);
         }
     }
 

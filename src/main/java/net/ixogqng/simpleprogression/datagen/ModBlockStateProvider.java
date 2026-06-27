@@ -15,8 +15,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.TIN_BLOCK);
-        blockWithItem(ModBlocks.TIN_ORE);
         blockWithItem(ModBlocks.BRONZE_BLOCK);
+        blockWithItem(ModBlocks.RAW_TIN_BLOCK);
+        blockWithItem(ModBlocks.TIN_ORE);
+        blockWithItem(ModBlocks.ECLIPSITE_BLOCK);
+        blockWithItem(ModBlocks.RAW_ECLIPSITE_BLOCK);
+        blockWithItem(ModBlocks.ECLIPSITE_ORE);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
