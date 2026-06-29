@@ -70,7 +70,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ECLIPSITE_ORE.get())
                 .add(ModBlocks.SILVER_BLOCK.get())
                 .add(ModBlocks.RAW_SILVER_BLOCK.get())
-                .add(ModBlocks.SILVER_ORE.get());
+                .add(ModBlocks.SILVER_ORE.get())
+                .add(ModBlocks.DEEPSLATE_TIN_ORE.get());
 
         tag(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)

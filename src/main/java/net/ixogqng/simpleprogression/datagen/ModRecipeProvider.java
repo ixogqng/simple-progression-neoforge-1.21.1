@@ -2,17 +2,10 @@ package net.ixogqng.simpleprogression.datagen;
 
 import net.ixogqng.simpleprogression.block.ModBlocks;
 import net.ixogqng.simpleprogression.item.ModItems;
-import net.ixogqng.simpleprogression.recipe.AdvancedForgeRecipeBuilder;
-import net.ixogqng.simpleprogression.recipe.BasicForgeRecipeBuilder;
-import net.ixogqng.simpleprogression.recipe.ModRecipes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.CookingBookCategory;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
@@ -143,15 +136,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.TIN_BLOCK)
                 .unlockedBy("has_tin_block", has(ModBlocks.TIN_BLOCK))
                 .save(recipeOutput, "tin_ingot_from_tin_block");
-        BasicForgeRecipeBuilder.create(
-                Ingredient.of(ModItems.RAW_TIN),
-                CookingBookCategory.MISC,
-                ModItems.TIN_INGOT.get(),
-                0.7f,
-                200
-        )
-                .unlockedBy("has_raw_tin", has(ModItems.RAW_TIN))
-                .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COPPER_PICKAXE.get())
                 .pattern("FFF")
@@ -218,15 +202,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("F F")
                 .define('F', Items.COPPER_INGOT)
                 .unlockedBy("has_tin_ingot", has(Items.COPPER_INGOT))
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BASIC_FORGE)
-                .pattern("FFF")
-                .pattern("FKF")
-                .pattern("FWF")
-                .define('F', Blocks.CLAY)
-                .define('K', ModItems.KINDLING)
-                .define('W', ItemTags.LOGS)
-                .unlockedBy("has_kindling", has(ModItems.KINDLING))
                 .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.FURNACE)
                 .pattern("FFF")

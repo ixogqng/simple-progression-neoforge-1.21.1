@@ -36,8 +36,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.TIN_BLOCK.get());
-        dropSelf(ModBlocks.BASIC_FORGE.get());
-        dropSelf(ModBlocks.ADVANCED_FORGE.get());
         dropSelf(ModBlocks.BRONZE_BLOCK.get());
         dropSelf(ModBlocks.RAW_TIN_BLOCK.get());
         dropSelf(ModBlocks.RAW_ECLIPSITE_BLOCK.get());
@@ -51,6 +49,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.ECLIPSITE_ORE.get(), ModItems.RAW_ECLIPSITE.get(), 1.0f, 2.0f));
         add(ModBlocks.SILVER_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 1.0f, 3.0f));
+        add(ModBlocks.DEEPSLATE_TIN_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_TIN_ORE.get(), ModItems.RAW_TIN.get(), 2.0f, 5.0f));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

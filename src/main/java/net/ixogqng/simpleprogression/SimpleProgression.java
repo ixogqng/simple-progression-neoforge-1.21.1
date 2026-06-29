@@ -1,10 +1,7 @@
 package net.ixogqng.simpleprogression;
 
 import net.ixogqng.simpleprogression.block.ModBlocks;
-import net.ixogqng.simpleprogression.block.entity.ModBlockEntities;
 import net.ixogqng.simpleprogression.item.ModItems;
-import net.ixogqng.simpleprogression.recipe.ModRecipes;
-import net.ixogqng.simpleprogression.screen.ModMenuTypes;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -63,10 +60,6 @@ public class SimpleProgression {
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
-        ModRecipes.register(modEventBus);
-
-        ModBlockEntities.register(modEventBus);
-        ModMenuTypes.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
@@ -76,7 +69,6 @@ public class SimpleProgression {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.KINDLING);
             event.accept(ModItems.FLINT_PICKAXE);
             event.accept(ModItems.FLINT_SWORD);
             event.accept(ModItems.FLINT_HOE);
@@ -94,7 +86,6 @@ public class SimpleProgression {
             event.accept(ModItems.TIN_SHOVEL);
             event.accept(ModBlocks.TIN_BLOCK);
             event.accept(ModBlocks.TIN_ORE);
-            event.accept(ModBlocks.BASIC_FORGE);
             event.accept(ModItems.RAW_TIN);
             event.accept(ModItems.COPPER_PICKAXE);
             event.accept(ModItems.COPPER_SWORD);
@@ -128,7 +119,6 @@ public class SimpleProgression {
             event.accept(ModItems.BRONZE_CHESTPLATE);
             event.accept(ModItems.BRONZE_LEGGINGS);
             event.accept(ModItems.BRONZE_BOOTS);
-            event.accept(ModBlocks.ADVANCED_FORGE);
             event.accept(ModBlocks.BRONZE_BLOCK);
             event.accept(ModItems.ECLIPSITE_PICKAXE);
             event.accept(ModItems.ECLIPSITE_SWORD);
@@ -159,6 +149,7 @@ public class SimpleProgression {
             event.accept(ModBlocks.SILVER_ORE);
             event.accept(ModBlocks.SILVER_BLOCK);
             event.accept(ModBlocks.RAW_SILVER_BLOCK);
+            event.accept(ModBlocks.DEEPSLATE_TIN_ORE);
         }
     }
 

@@ -1,8 +1,6 @@
 package net.ixogqng.simpleprogression.block;
 
 import net.ixogqng.simpleprogression.SimpleProgression;
-import net.ixogqng.simpleprogression.block.custom.AdvancedForgeBlock;
-import net.ixogqng.simpleprogression.block.custom.BasicForgeBlock;
 import net.ixogqng.simpleprogression.item.ModItems;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.BlockItem;
@@ -36,12 +34,6 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE).requiresCorrectToolForDrops().strength(3.0F, 6.0F)
             ));
 
-    public static final DeferredBlock<Block> BASIC_FORGE = registerBlock("basic_forge",
-            () -> new BasicForgeBlock(BlockBehaviour.Properties.of()));
-
-    public static final DeferredBlock<Block> ADVANCED_FORGE = registerBlock("advanced_forge",
-            () -> new AdvancedForgeBlock(BlockBehaviour.Properties.of()));
-
     public static final DeferredBlock<Block> BRONZE_BLOCK = registerBlock("bronze_block",
             () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.METAL)
             ));
@@ -69,6 +61,14 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SILVER_ORE = registerBlock("silver_ore",
             () -> new DropExperienceBlock(ConstantInt.of(0), BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0F, 3.0F)
+            ));
+
+    public static final DeferredBlock<Block> DEEPSLATE_TIN_ORE = registerBlock("deepslate_tin_ore",
+            () -> new DropExperienceBlock(ConstantInt.of(0), BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DEEPSLATE)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresCorrectToolForDrops()
                     .strength(3.0F, 3.0F)

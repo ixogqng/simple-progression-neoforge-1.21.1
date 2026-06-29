@@ -16,8 +16,6 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SimpleProgression.MODID);
 
     // Items
-    public static final DeferredItem<Item> KINDLING = ITEMS.register("kindling",
-            () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<PickaxeItem> FLINT_PICKAXE = ITEMS.register("flint_pickaxe",
             () -> new PickaxeItem(ModToolTiers.FLINT,

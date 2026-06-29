@@ -83,8 +83,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(ModItems.KINDLING.get());
-
         handheldItem(ModItems.FLINT_PICKAXE.get());
         handheldItem(ModItems.FLINT_SWORD.get());
         handheldItem(ModItems.FLINT_HOE.get());
