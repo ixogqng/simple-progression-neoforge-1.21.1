@@ -118,6 +118,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BRONZE_HOE.get());
         handheldItem(ModItems.BRONZE_AXE.get());
         handheldItem(ModItems.BRONZE_SHOVEL.get());
+        handheldItem(ModItems.BRONZE_PAXEL.get());
         basicItem(ModItems.BRONZE_INGOT.get());
         trimmedArmorItem(ModItems.BRONZE_HELMET);
         trimmedArmorItem(ModItems.BRONZE_BOOTS);
@@ -153,5 +154,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.COPPER_PAXEL.get());
         handheldItem(ModItems.SILVER_PAXEL.get());
         handheldItem(ModItems.ECLIPSITE_PAXEL.get());
+        handheldItem(ModItems.NETHERITE_PAXEL.get());
+        handheldItem(ModItems.STONE_PAXEL.get());
     }
 }

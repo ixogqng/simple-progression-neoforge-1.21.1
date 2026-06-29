@@ -1,10 +1,7 @@
 package net.ixogqng.simpleprogression.event;
 
 import net.ixogqng.simpleprogression.SimpleProgression;
-import net.ixogqng.simpleprogression.item.custom.BronzeAxeItem;
-import net.ixogqng.simpleprogression.item.custom.BronzeHoeItem;
-import net.ixogqng.simpleprogression.item.custom.BronzePickaxeItem;
-import net.ixogqng.simpleprogression.item.custom.BronzeShovelItem;
+import net.ixogqng.simpleprogression.item.custom.*;
 import net.ixogqng.simpleprogression.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -64,14 +61,15 @@ public class ModEvents {
     // Done with the help of https://github.com/CoFH/CoFHCore/blob/1.19.x/src/main/java/cofh/core/event/AreaEffectEvents.java
     // Don't be a jerk License
     @SubscribeEvent
-    public static void onSilverPickaxeUsage(BlockEvent.BreakEvent event) {
+    public static void onBronzePickaxeUsage(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
         ItemStack mainHandItem = player.getMainHandItem();
 
         if((mainHandItem.getItem() instanceof BronzePickaxeItem
                 || mainHandItem.getItem() instanceof BronzeAxeItem
                 || mainHandItem.getItem() instanceof BronzeShovelItem
-                || mainHandItem.getItem() instanceof BronzeHoeItem) && player instanceof ServerPlayer serverPlayer) {
+                || mainHandItem.getItem() instanceof BronzeHoeItem
+                || mainHandItem.getItem() instanceof BronzePaxelItem) && player instanceof ServerPlayer serverPlayer) {
             DiggerItem hammer = (DiggerItem) mainHandItem.getItem();
             BlockPos initialBlockPos = event.getPos();
             if(HARVESTED_BLOCKS.contains(initialBlockPos)) {

@@ -32,10 +32,13 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.FLINT_PAXEL.get())
                 .add(ModItems.IRON_PAXEL.get())
                 .add(ModItems.TIN_PAXEL.get())
+                .add(ModItems.BRONZE_PAXEL.get())
                 .add(ModItems.GOLD_PAXEL.get())
                 .add(ModItems.COPPER_PAXEL.get())
                 .add(ModItems.SILVER_PAXEL.get())
-                .add(ModItems.ECLIPSITE_PAXEL.get());
+                .add(ModItems.ECLIPSITE_PAXEL.get())
+                .add(ModItems.NETHERITE_PAXEL.get())
+                .add(ModItems.STONE_PAXEL.get());
 
         tag(ItemTags.PICKAXES)
                 .add(ModItems.FLINT_PICKAXE.get())

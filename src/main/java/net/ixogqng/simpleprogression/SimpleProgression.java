@@ -108,13 +108,16 @@ public class SimpleProgression {
             event.accept(ModItems.BAG_OF_WIND);
             event.accept(ModItems.WOODEN_PAXEL);
             event.accept(ModItems.FLINT_PAXEL);
+            event.accept(ModItems.STONE_PAXEL);
             event.accept(ModItems.IRON_PAXEL);
+            event.accept(ModItems.BRONZE_PAXEL);
             event.accept(ModItems.TIN_PAXEL);
             event.accept(ModItems.GOLD_PAXEL);
             event.accept(ModItems.SILVER_PAXEL);
             event.accept(ModItems.COPPER_PAXEL);
             event.accept(ModItems.ECLIPSITE_PAXEL);
             event.accept(ModItems.DIAMOND_PAXEL);
+            event.accept(ModItems.NETHERITE_PAXEL);
             event.accept(ModItems.BRONZE_PICKAXE);
             event.accept(ModItems.BRONZE_SWORD);
             event.accept(ModItems.BRONZE_AXE);

@@ -171,9 +171,9 @@ public class ModItems {
     public static final DeferredItem<PaxelItem> GOLD_PAXEL = ITEMS.register("gold_paxel",
             () -> new PaxelItem(Tiers.GOLD,
                     new Item.Properties().attributes(PaxelItem.createAttributes(Tiers.GOLD, 1, -2.8f))));
-    /*public static final DeferredItem<PaxelItem> BRONZE_PAXEL = ITEMS.register("bronze_paxel",
-            () -> new PaxelItem(ModToolTiers.BRONZE,
-                    new Item.Properties().attributes(PaxelItem.createAttributes(ModToolTiers.BRONZE, 1, -2.8f))));*/
+    public static final DeferredItem<BronzePaxelItem> BRONZE_PAXEL = ITEMS.register("bronze_paxel",
+            () -> new BronzePaxelItem(ModToolTiers.BRONZE,
+                    new Item.Properties().attributes(BronzePaxelItem.createAttributes(ModToolTiers.BRONZE, 1, -2.8f))));
     public static final DeferredItem<PaxelItem> COPPER_PAXEL = ITEMS.register("copper_paxel",
             () -> new PaxelItem(ModToolTiers.COPPER,
                     new Item.Properties().attributes(PaxelItem.createAttributes(ModToolTiers.COPPER, 1, -2.8f))));
@@ -183,6 +183,12 @@ public class ModItems {
     public static final DeferredItem<PaxelItem> ECLIPSITE_PAXEL = ITEMS.register("eclipsite_paxel",
             () -> new PaxelItem(ModToolTiers.ECLIPSITE,
                     new Item.Properties().attributes(PaxelItem.createAttributes(ModToolTiers.ECLIPSITE, 1, -2.8f))));
+    public static final DeferredItem<PaxelItem> NETHERITE_PAXEL = ITEMS.register("netherite_paxel",
+            () -> new PaxelItem(Tiers.NETHERITE,
+                    new Item.Properties().attributes(PaxelItem.createAttributes(Tiers.NETHERITE, 1, -2.8f))));
+    public static final DeferredItem<PaxelItem> STONE_PAXEL = ITEMS.register("stone_paxel",
+            () -> new PaxelItem(Tiers.STONE,
+                    new Item.Properties().attributes(PaxelItem.createAttributes(Tiers.STONE, 1, -2.8f))));
 
     public static final DeferredItem<SwordItem> BRONZE_SWORD = ITEMS.register("bronze_sword",
             () -> new SwordItem(ModToolTiers.BRONZE,

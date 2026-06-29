@@ -21,6 +21,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_TIN_ORE_KEY = registerKey("tin_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_ECLIPSITE_ORE_KEY = registerKey("eclipsite_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_SILVER_ORE_KEY = registerKey("silver_ore");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -32,8 +33,14 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(deepslateReplacables, ModBlocks.TIN_ORE.get().defaultBlockState())
         );
 
+        List<OreConfiguration.TargetBlockState> overworldSilverOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.SILVER_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplacables, ModBlocks.SILVER_ORE.get().defaultBlockState())
+        );
+
         register(context, OVERWORLD_TIN_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTinOres, 5));
         register(context, END_ECLIPSITE_ORE_KEY, Feature.ORE, new OreConfiguration(endReplacables, ModBlocks.ECLIPSITE_ORE.get().defaultBlockState(), 3));
+        register(context, OVERWORLD_SILVER_ORE_KEY, Feature.ORE, new OreConfiguration(overworldSilverOres, 5));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
