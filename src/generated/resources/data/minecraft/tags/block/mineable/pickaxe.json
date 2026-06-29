@@ -6,6 +6,9 @@
     "simpleprogression:bronze_block",
     "simpleprogression:raw_eclipsite_block",
     "simpleprogression:eclipsite_block",
-    "simpleprogression:eclipsite_ore"
+    "simpleprogression:eclipsite_ore",
+    "simpleprogression:silver_block",
+    "simpleprogression:raw_silver_block",
+    "simpleprogression:silver_ore"
   ]
 }

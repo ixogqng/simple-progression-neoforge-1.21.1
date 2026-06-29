@@ -1,13 +1,17 @@
 package net.ixogqng.simpleprogression.event;
 
 import net.ixogqng.simpleprogression.SimpleProgression;
-import net.ixogqng.simpleprogression.item.custom.SilverPickaxeItem;
+import net.ixogqng.simpleprogression.item.custom.BronzeAxeItem;
+import net.ixogqng.simpleprogression.item.custom.BronzeHoeItem;
+import net.ixogqng.simpleprogression.item.custom.BronzePickaxeItem;
+import net.ixogqng.simpleprogression.item.custom.BronzeShovelItem;
 import net.ixogqng.simpleprogression.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DiggerItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -64,13 +68,17 @@ public class ModEvents {
         Player player = event.getPlayer();
         ItemStack mainHandItem = player.getMainHandItem();
 
-        if(mainHandItem.getItem() instanceof SilverPickaxeItem hammer && player instanceof ServerPlayer serverPlayer) {
+        if((mainHandItem.getItem() instanceof BronzePickaxeItem
+                || mainHandItem.getItem() instanceof BronzeAxeItem
+                || mainHandItem.getItem() instanceof BronzeShovelItem
+                || mainHandItem.getItem() instanceof BronzeHoeItem) && player instanceof ServerPlayer serverPlayer) {
+            DiggerItem hammer = (DiggerItem) mainHandItem.getItem();
             BlockPos initialBlockPos = event.getPos();
             if(HARVESTED_BLOCKS.contains(initialBlockPos)) {
                 return;
             }
 
-            for(BlockPos pos : SilverPickaxeItem.getBlocksToBeDestroyed(1, initialBlockPos, serverPlayer)) {
+            for(BlockPos pos : BronzePickaxeItem.getBlocksToBeDestroyed(1, initialBlockPos, serverPlayer)) {
                 if(pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
                     continue;
                 }

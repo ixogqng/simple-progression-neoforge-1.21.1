@@ -27,6 +27,10 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_ECLIPSITE_TOOL = createTag("incorrect_for_eclipsite_tool");
         public static final TagKey<Block> NEEDS_ECLIPSITE_TOOL = createTag("needs_eclipsite_tool");
 
+        public static final TagKey<Block> CAN_BE_TILLED = createTag("can_be_tilled");
+
+        public static final TagKey<Block> INCORRECT_FOR_SILVER_TOOL = createTag("incorrect_for_silver_tool");
+
 
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(SimpleProgression.MODID, name));
@@ -36,6 +40,7 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> STICK_ITEMS = createTag("stick_items");
         public static final TagKey<Item> GOLD_TOOLS = createTag("gold_tools");
+        public static final TagKey<Item> PAXELS = createTag("paxels");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath(SimpleProgression.MODID, name));

@@ -21,6 +21,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ECLIPSITE_BLOCK);
         blockWithItem(ModBlocks.RAW_ECLIPSITE_BLOCK);
         blockWithItem(ModBlocks.ECLIPSITE_ORE);
+        blockWithItem(ModBlocks.SILVER_BLOCK);
+        blockWithItem(ModBlocks.RAW_SILVER_BLOCK);
+        blockWithItem(ModBlocks.SILVER_ORE);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

@@ -106,6 +106,14 @@ public class SimpleProgression {
             event.accept(ModItems.COPPER_LEGGINGS);
             event.accept(ModItems.COPPER_BOOTS);
             event.accept(ModItems.BAG_OF_WIND);
+            event.accept(ModItems.WOODEN_PAXEL);
+            event.accept(ModItems.FLINT_PAXEL);
+            event.accept(ModItems.IRON_PAXEL);
+            event.accept(ModItems.TIN_PAXEL);
+            event.accept(ModItems.GOLD_PAXEL);
+            event.accept(ModItems.SILVER_PAXEL);
+            event.accept(ModItems.COPPER_PAXEL);
+            event.accept(ModItems.ECLIPSITE_PAXEL);
             event.accept(ModItems.DIAMOND_PAXEL);
             event.accept(ModItems.BRONZE_PICKAXE);
             event.accept(ModItems.BRONZE_SWORD);
@@ -135,7 +143,19 @@ public class SimpleProgression {
             event.accept(ModBlocks.ECLIPSITE_BLOCK);
             event.accept(ModBlocks.RAW_ECLIPSITE_BLOCK);
             event.accept(ModItems.SILVER_PICKAXE);
+            event.accept(ModItems.SILVER_SWORD);
+            event.accept(ModItems.SILVER_AXE);
+            event.accept(ModItems.SILVER_HOE);
             event.accept(ModItems.SILVER_SHOVEL);
+            event.accept(ModItems.RAW_SILVER);
+            event.accept(ModItems.SILVER_INGOT);
+            event.accept(ModItems.SILVER_HELMET);
+            event.accept(ModItems.SILVER_CHESTPLATE);
+            event.accept(ModItems.SILVER_LEGGINGS);
+            event.accept(ModItems.SILVER_BOOTS);
+            event.accept(ModBlocks.SILVER_ORE);
+            event.accept(ModBlocks.SILVER_BLOCK);
+            event.accept(ModBlocks.RAW_SILVER_BLOCK);
         }
     }
 

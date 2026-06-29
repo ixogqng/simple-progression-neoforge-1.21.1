@@ -55,6 +55,15 @@ public class ModArmorMaterials {
                 attribute.put(ArmorItem.Type.BODY, 5);
             }), 5, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0f, 0.1f, () -> ModItems.ECLIPSITE_INGOT.get());
 
+    public static final Holder<ArmorMaterial> SILVER_ARMOR_MATERIAL = register("silver",
+            Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
+                attribute.put(ArmorItem.Type.BOOTS, 2);
+                attribute.put(ArmorItem.Type.CHESTPLATE, 5);
+                attribute.put(ArmorItem.Type.HELMET, 2);
+                attribute.put(ArmorItem.Type.LEGGINGS, 6);
+                attribute.put(ArmorItem.Type.BODY, 5);
+            }), 8, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> ModItems.SILVER_INGOT.get());
+
     private static Holder<ArmorMaterial> register(String name, EnumMap<ArmorItem.Type, Integer> typeProtection,
                                                   int enchantability, Holder<SoundEvent> equipSound, float toughness, float knockbackResistance,
                                                   Supplier<Item> ingredientItem) {

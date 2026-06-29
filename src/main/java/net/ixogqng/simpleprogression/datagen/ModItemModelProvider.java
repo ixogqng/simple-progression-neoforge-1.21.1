@@ -135,6 +135,23 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.ECLIPSITE_LEGGINGS);
         trimmedArmorItem(ModItems.ECLIPSITE_CHESTPLATE);
         handheldItem(ModItems.SILVER_PICKAXE.get());
+        handheldItem(ModItems.SILVER_SWORD.get());
+        handheldItem(ModItems.SILVER_AXE.get());
+        handheldItem(ModItems.SILVER_HOE.get());
         handheldItem(ModItems.SILVER_SHOVEL.get());
+        trimmedArmorItem(ModItems.SILVER_HELMET);
+        trimmedArmorItem(ModItems.SILVER_BOOTS);
+        trimmedArmorItem(ModItems.SILVER_LEGGINGS);
+        trimmedArmorItem(ModItems.SILVER_CHESTPLATE);
+        basicItem(ModItems.RAW_SILVER.get());
+        basicItem(ModItems.SILVER_INGOT.get());
+        handheldItem(ModItems.WOODEN_PAXEL.get());
+        handheldItem(ModItems.FLINT_PAXEL.get());
+        handheldItem(ModItems.IRON_PAXEL.get());
+        handheldItem(ModItems.TIN_PAXEL.get());
+        handheldItem(ModItems.GOLD_PAXEL.get());
+        handheldItem(ModItems.COPPER_PAXEL.get());
+        handheldItem(ModItems.SILVER_PAXEL.get());
+        handheldItem(ModItems.ECLIPSITE_PAXEL.get());
     }
 }

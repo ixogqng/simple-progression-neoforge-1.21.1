@@ -28,6 +28,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
 
+        tag(ModTags.Blocks.INCORRECT_FOR_SILVER_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
         tag(ModTags.Blocks.MINEABLE_WITH_PAXEL)
                 .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .addTag(BlockTags.MINEABLE_WITH_SHOVEL)
@@ -41,19 +44,19 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(Blocks.PODZOL)
                 .add(Blocks.ROOTED_DIRT);
 
+        tag(ModTags.Blocks.CAN_BE_TILLED)
+                .add(Blocks.DIRT)
+                .add(Blocks.DIRT_PATH)
+                .add(Blocks.GRASS_BLOCK);
+
         tag(ModTags.Blocks.NEEDS_TIN_TOOL)
-                .addTag(BlockTags.NEEDS_STONE_TOOL);
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
 
         tag(ModTags.Blocks.INCORRECT_FOR_TIN_TOOL)
-                .addTag(BlockTags.NEEDS_IRON_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .remove(ModTags.Blocks.NEEDS_TIN_TOOL);
 
-        tag(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
-                .add(Blocks.COAL_ORE);
-
         tag(BlockTags.INCORRECT_FOR_GOLD_TOOL)
-                .remove(BlockTags.NEEDS_DIAMOND_TOOL)
                 .remove(BlockTags.NEEDS_IRON_TOOL)
                 .remove(BlockTags.NEEDS_STONE_TOOL);
 
@@ -64,7 +67,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BRONZE_BLOCK.get())
                 .add(ModBlocks.RAW_ECLIPSITE_BLOCK.get())
                 .add(ModBlocks.ECLIPSITE_BLOCK.get())
-                .add(ModBlocks.ECLIPSITE_ORE.get());
+                .add(ModBlocks.ECLIPSITE_ORE.get())
+                .add(ModBlocks.SILVER_BLOCK.get())
+                .add(ModBlocks.RAW_SILVER_BLOCK.get())
+                .add(ModBlocks.SILVER_ORE.get());
 
         tag(ModTags.Blocks.INCORRECT_FOR_COPPER_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -75,5 +81,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.ECLIPSITE_ORE.get());
+
+        tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(ModBlocks.SILVER_ORE.get());
     }
 }

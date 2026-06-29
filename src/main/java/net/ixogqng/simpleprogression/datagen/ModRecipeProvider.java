@@ -381,5 +381,72 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', ModItems.ECLIPSITE_INGOT)
                 .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
                 .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_PICKAXE.get())
+                .pattern("FFF")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('F', ModItems.SILVER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_AXE.get())
+                .pattern("FF")
+                .pattern("FS")
+                .pattern(" S")
+                .define('F', ModItems.SILVER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_HOE.get())
+                .pattern("FF")
+                .pattern(" S")
+                .pattern(" S")
+                .define('F', ModItems.SILVER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_SHOVEL.get())
+                .pattern(" F ")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('F', ModItems.SILVER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_SWORD.get())
+                .pattern(" F ")
+                .pattern(" F ")
+                .pattern(" S ")
+                .define('F', ModItems.SILVER_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_BOOTS.get())
+                .pattern("F F")
+                .pattern("F F")
+                .define('F', ModItems.SILVER_INGOT)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_LEGGINGS.get())
+                .pattern("FFF")
+                .pattern("F F")
+                .pattern("F F")
+                .define('F', ModItems.SILVER_INGOT)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_CHESTPLATE.get())
+                .pattern("F F")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', ModItems.SILVER_INGOT)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SILVER_HELMET.get())
+                .pattern("FFF")
+                .pattern("F F")
+                .define('F', ModItems.SILVER_INGOT)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
     }
 }
