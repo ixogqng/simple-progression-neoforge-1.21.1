@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 2.0,
+  "group": "eclipsite",
+  "ingredient": {
+    "item": "simpleprogression:eclipsite_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "simpleprogression:eclipsite_ingot"
+  }
+}

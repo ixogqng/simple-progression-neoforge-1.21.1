@@ -5,10 +5,12 @@ import net.ixogqng.simpleprogression.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -58,6 +60,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.STICK)
                 .unlockedBy("has_flint", has(Items.FLINT))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.FLINT_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.FLINT_AXE)
+                .define('B', ModItems.FLINT_SHOVEL)
+                .define('C', ModItems.FLINT_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_flint", has(Items.FLINT))
+                .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.TIN_PICKAXE.get())
                 .pattern("FFF")
@@ -99,6 +111,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.STICK)
                 .unlockedBy("has_tin_ingot", has(ModItems.TIN_INGOT))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.TIN_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.TIN_AXE)
+                .define('B', ModItems.TIN_SHOVEL)
+                .define('C', ModItems.TIN_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_tin_ingot", has(ModItems.TIN_INGOT))
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.TIN_BOOTS.get())
                 .pattern("F F")
                 .pattern("F F")
@@ -136,6 +158,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.TIN_BLOCK)
                 .unlockedBy("has_tin_block", has(ModBlocks.TIN_BLOCK))
                 .save(recipeOutput, "tin_ingot_from_tin_block");
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_TIN_BLOCK.get())
+                .pattern("FFF")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', ModItems.RAW_TIN)
+                .unlockedBy("has_raw_tin", has(ModItems.RAW_TIN))
+                .save(recipeOutput);
+        oreSmelting(recipeOutput, List.of(ModItems.RAW_TIN, ModBlocks.TIN_ORE, ModBlocks.DEEPSLATE_TIN_ORE), RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.7f, 200, "tin");
+        oreBlasting(recipeOutput, List.of(ModItems.RAW_TIN, ModBlocks.TIN_ORE, ModBlocks.DEEPSLATE_TIN_ORE), RecipeCategory.MISC, ModItems.TIN_INGOT.get(), 0.7f, 100, "tin");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COPPER_PICKAXE.get())
                 .pattern("FFF")
@@ -203,6 +234,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', Items.COPPER_INGOT)
                 .unlockedBy("has_tin_ingot", has(Items.COPPER_INGOT))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.COPPER_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.COPPER_AXE)
+                .define('B', ModItems.COPPER_SHOVEL)
+                .define('C', ModItems.COPPER_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.FURNACE)
                 .pattern("FFF")
                 .pattern("FCF")
@@ -241,6 +282,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern(" S ")
                 .pattern(" S ")
                 .define('F', ModItems.BRONZE_INGOT)
+                .define('S', Items.STICK)
+                .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BRONZE_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.BRONZE_AXE)
+                .define('B', ModItems.BRONZE_SHOVEL)
+                .define('C', ModItems.BRONZE_PICKAXE)
                 .define('S', Items.STICK)
                 .unlockedBy("has_bronze_ingot", has(ModItems.BRONZE_INGOT))
                 .save(recipeOutput);
@@ -289,6 +340,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.BRONZE_BLOCK)
                 .unlockedBy("has_bronze_block", has(ModBlocks.BRONZE_BLOCK))
                 .save(recipeOutput, "bronze_ingot_from_bronze_block");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BRONZE_INGOT.get())
+                .requires(Items.IRON_INGOT)
+                .requires(ModItems.RAW_TIN)
+                .unlockedBy("has_raw_tin", has(ModItems.RAW_TIN))
+                .save(recipeOutput, "bronze_ingot");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ECLIPSITE_PICKAXE.get())
                 .pattern("FFF")
@@ -356,6 +412,32 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('F', ModItems.ECLIPSITE_INGOT)
                 .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ECLIPSITE_BLOCK.get())
+                .pattern("FFF")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', ModItems.ECLIPSITE_INGOT)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_ECLIPSITE_BLOCK.get())
+                .pattern("FFF")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', ModItems.RAW_ECLIPSITE)
+                .unlockedBy("has_raw_eclipsite", has(ModItems.RAW_ECLIPSITE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.ECLIPSITE_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.ECLIPSITE_AXE)
+                .define('B', ModItems.ECLIPSITE_SHOVEL)
+                .define('C', ModItems.ECLIPSITE_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_eclipsite_ingot", has(ModItems.ECLIPSITE_INGOT))
+                .save(recipeOutput);
+        oreSmelting(recipeOutput, List.of(ModItems.RAW_ECLIPSITE, ModBlocks.ECLIPSITE_ORE), RecipeCategory.MISC, ModItems.ECLIPSITE_INGOT.get(), 2.0f, 200, "eclipsite");
+        oreBlasting(recipeOutput, List.of(ModItems.RAW_ECLIPSITE, ModBlocks.ECLIPSITE_ORE), RecipeCategory.MISC, ModItems.ECLIPSITE_INGOT.get(), 2.0f, 100, "eclipsite");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_PICKAXE.get())
                 .pattern("FFF")
@@ -422,6 +504,102 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("F F")
                 .define('F', ModItems.SILVER_INGOT)
                 .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SILVER_BLOCK.get())
+                .pattern("FFF")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', ModItems.SILVER_INGOT)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_SILVER_BLOCK.get())
+                .pattern("FFF")
+                .pattern("FFF")
+                .pattern("FFF")
+                .define('F', ModItems.RAW_SILVER)
+                .unlockedBy("has_raw_silver", has(ModItems.RAW_SILVER))
+                .save(recipeOutput);
+        oreSmelting(recipeOutput, List.of(ModItems.RAW_SILVER, ModBlocks.SILVER_ORE, ModBlocks.DEEPSLATE_SILVER_ORE), RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 0.7f, 200, "silver");
+        oreBlasting(recipeOutput, List.of(ModItems.RAW_SILVER, ModBlocks.SILVER_ORE, ModBlocks.DEEPSLATE_SILVER_ORE), RecipeCategory.MISC, ModItems.SILVER_INGOT.get(), 0.7f, 100, "silver");
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.SILVER_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.SILVER_AXE)
+                .define('B', ModItems.SILVER_SHOVEL)
+                .define('C', ModItems.SILVER_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_silver_ingot", has(ModItems.SILVER_INGOT))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.STONE_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', Items.STONE_AXE)
+                .define('B', Items.STONE_SHOVEL)
+                .define('C', Items.STONE_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_cobblestone", has(Blocks.COBBLESTONE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.WOODEN_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', Items.WOODEN_AXE)
+                .define('B', Items.WOODEN_SHOVEL)
+                .define('C', Items.WOODEN_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_wood", has(Blocks.OAK_WOOD))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.DIAMOND_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', Items.DIAMOND_AXE)
+                .define('B', Items.DIAMOND_SHOVEL)
+                .define('C', Items.DIAMOND_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_diamond", has(Items.DIAMOND))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.GOLD_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', Items.GOLDEN_AXE)
+                .define('B', Items.GOLDEN_SHOVEL)
+                .define('C', Items.GOLDEN_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_gold_ingot", has(Items.GOLD_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.IRON_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', Items.IRON_AXE)
+                .define('B', Items.IRON_SHOVEL)
+                .define('C', Items.IRON_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_iron_ingot", has(Items.IRON_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.NETHERITE_PAXEL.get())
+                .pattern("ABC")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', Items.NETHERITE_AXE)
+                .define('B', Items.NETHERITE_SHOVEL)
+                .define('C', Items.NETHERITE_PICKAXE)
+                .define('S', Items.STICK)
+                .unlockedBy("has_netherite_ingot", has(Items.NETHERITE_INGOT))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BAG_OF_WIND.get())
+                .pattern(" F ")
+                .pattern("FWF")
+                .pattern(" F ")
+                .define('F', Items.LEATHER)
+                .define('W', Items.FEATHER)
+                .unlockedBy("has_feather", has(Items.FEATHER))
                 .save(recipeOutput);
     }
 }

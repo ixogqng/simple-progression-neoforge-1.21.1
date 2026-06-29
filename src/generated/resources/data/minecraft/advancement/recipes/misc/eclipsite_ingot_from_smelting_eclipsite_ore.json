@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_eclipsite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "simpleprogression:eclipsite_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:eclipsite_ingot_from_smelting_eclipsite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_eclipsite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:eclipsite_ingot_from_smelting_eclipsite_ore"
+    ]
+  }
+}

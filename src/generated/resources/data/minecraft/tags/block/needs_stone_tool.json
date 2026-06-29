@@ -1,5 +1,14 @@
 {
   "values": [
-    "simpleprogression:silver_ore"
+    "simpleprogression:silver_ore",
+    "simpleprogression:tin_block",
+    "simpleprogression:tin_ore",
+    "simpleprogression:deepslate_tin_ore",
+    "simpleprogression:raw_tin_block",
+    "simpleprogression:silver_block",
+    "simpleprogression:deepslate_silver_ore",
+    "simpleprogression:raw_silver_block",
+    "simpleprogression:silver_ore",
+    "simpleprogression:bronze_block"
   ]
 }

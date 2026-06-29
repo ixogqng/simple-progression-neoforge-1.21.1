@@ -12,7 +12,6 @@ public class ModTags {
     public static class Blocks {
         public static final TagKey<Block> INCORRECT_FOR_FLINT_TOOL = createTag("incorrect_for_flint_tool");
 
-        public static final TagKey<Block> NEEDS_TIN_TOOL = createTag("needs_tin_tool");
         public static final TagKey<Block> INCORRECT_FOR_TIN_TOOL = createTag("incorrect_for_tin_tool");
 
         public static final TagKey<Block> INCORRECT_FOR_COPPER_TOOL = createTag("incorrect_for_copper_tool");
@@ -22,10 +21,8 @@ public class ModTags {
         public static final TagKey<Block> CAN_HAVE_PATH = createTag("can_have_path");
 
         public static final TagKey<Block> INCORRECT_FOR_BRONZE_TOOL = createTag("incorrect_for_bronze_tool");
-        public static final TagKey<Block> NEEDS_BRONZE_TOOL = createTag("needs_bronze_tool");
 
         public static final TagKey<Block> INCORRECT_FOR_ECLIPSITE_TOOL = createTag("incorrect_for_eclipsite_tool");
-        public static final TagKey<Block> NEEDS_ECLIPSITE_TOOL = createTag("needs_eclipsite_tool");
 
         public static final TagKey<Block> CAN_BE_TILLED = createTag("can_be_tilled");
 

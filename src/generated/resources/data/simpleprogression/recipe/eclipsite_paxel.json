@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "simpleprogression:eclipsite_axe"
+    },
+    "B": {
+      "item": "simpleprogression:eclipsite_shovel"
+    },
+    "C": {
+      "item": "simpleprogression:eclipsite_pickaxe"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleprogression:eclipsite_paxel"
+  }
+}

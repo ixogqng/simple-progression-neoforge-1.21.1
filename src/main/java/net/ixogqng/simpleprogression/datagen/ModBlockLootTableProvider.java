@@ -51,6 +51,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 1.0f, 3.0f));
         add(ModBlocks.DEEPSLATE_TIN_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_TIN_ORE.get(), ModItems.RAW_TIN.get(), 2.0f, 5.0f));
+        add(ModBlocks.DEEPSLATE_SILVER_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.DEEPSLATE_SILVER_ORE.get(), ModItems.RAW_SILVER.get(), 1.0f, 3.0f));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

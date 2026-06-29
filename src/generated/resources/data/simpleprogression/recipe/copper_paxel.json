@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "simpleprogression:copper_axe"
+    },
+    "B": {
+      "item": "simpleprogression:copper_shovel"
+    },
+    "C": {
+      "item": "simpleprogression:copper_pickaxe"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleprogression:copper_paxel"
+  }
+}

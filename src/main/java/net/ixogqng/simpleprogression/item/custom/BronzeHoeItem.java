@@ -96,7 +96,6 @@ public class BronzeHoeItem extends HoeItem {
                             level.setBlock(pos, Blocks.DIRT.defaultBlockState(), 3);
                             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(serverPlayer, Blocks.DIRT.defaultBlockState()));
                             if (posState.is(Blocks.ROOTED_DIRT)) {
-                                SimpleProgression.LOGGER.info("It's rooted");
                                 Block.popResourceFromFace(level, pos, Direction.UP, new ItemStack(Items.HANGING_ROOTS));
                             }
                             if (player != null) {

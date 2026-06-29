@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": {
+      "item": "simpleprogression:silver_axe"
+    },
+    "B": {
+      "item": "simpleprogression:silver_shovel"
+    },
+    "C": {
+      "item": "simpleprogression:silver_pickaxe"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ABC",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "simpleprogression:silver_paxel"
+  }
+}

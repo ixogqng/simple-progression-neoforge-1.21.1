@@ -98,7 +98,6 @@ public class PaxelItem extends DiggerItem {
                 return InteractionResult.sidedSuccess(level.isClientSide);
             }
             else if (oxidizable != null) {
-                SimpleProgression.LOGGER.info("previous oxidized stage of " + blockstate.getBlock() + " is " + DataMapHooks.getPreviousOxidizedStage(blockstate.getBlock()));
                 BlockState scrapedState = oxidizable.defaultBlockState();
                 for (Property<?> property : blockstate.getProperties()) {
                     if (scrapedState.hasProperty(property)) {
@@ -127,7 +126,6 @@ public class PaxelItem extends DiggerItem {
                 return InteractionResult.sidedSuccess(level.isClientSide);
             }
             else if (waxable != null) {
-                SimpleProgression.LOGGER.info("previous oxidized stage of " + blockstate.getBlock() + " is " + DataMapHooks.getPreviousOxidizedStage(blockstate.getBlock()));
                 BlockState unwaxedState = waxable.defaultBlockState();
                 for (Property<?> property : blockstate.getProperties()) {
                     if (unwaxedState.hasProperty(property)) {

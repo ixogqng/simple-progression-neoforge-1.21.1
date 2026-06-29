@@ -1,5 +1,8 @@
 {
   "values": [
+    "simpleprogression:eclipsite_ore",
+    "simpleprogression:eclipsite_block",
+    "simpleprogression:raw_eclipsite_block",
     "simpleprogression:eclipsite_ore"
   ]
 }

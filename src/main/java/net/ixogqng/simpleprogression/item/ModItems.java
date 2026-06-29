@@ -227,7 +227,7 @@ public class ModItems {
     public static final DeferredItem<Item> ECLIPSITE_INGOT = ITEMS.register("eclipsite_ingot",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<ArmorItem> ECLIPSITE_HELMET = ITEMS.register("eclipsite_helmet",
-            () -> new ArmorItem(ModArmorMaterials.ECLIPSITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
+            () -> new ModArmorItem(ModArmorMaterials.ECLIPSITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties()
                     .durability(ArmorItem.Type.HELMET.getDurability(37))));
     public static final DeferredItem<ArmorItem> ECLIPSITE_BOOTS = ITEMS.register("eclipsite_boots",
             () -> new ArmorItem(ModArmorMaterials.ECLIPSITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties()

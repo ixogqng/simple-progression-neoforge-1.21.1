@@ -41,8 +41,8 @@ public class ModArmorMaterials {
             Util.make(new EnumMap<>(ArmorItem.Type.class), attribute -> {
                 attribute.put(ArmorItem.Type.BOOTS, 2);
                 attribute.put(ArmorItem.Type.CHESTPLATE, 5);
-                attribute.put(ArmorItem.Type.HELMET, 6);
-                attribute.put(ArmorItem.Type.LEGGINGS, 2);
+                attribute.put(ArmorItem.Type.HELMET, 2);
+                attribute.put(ArmorItem.Type.LEGGINGS, 6);
                 attribute.put(ArmorItem.Type.BODY, 5);
             }), 5, SoundEvents.ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> ModItems.BRONZE_INGOT.get());
 

@@ -1,10 +1,6 @@
 {
-  "remove": [
-    "#simpleprogression:needs_bronze_tool"
-  ],
   "values": [
-    "#minecraft:needs_diamond_tool",
-    "#minecraft:needs_iron_tool",
-    "#minecraft:needs_diamond_tool"
+    "#minecraft:incorrect_for_stone_tool",
+    "#minecraft:incorrect_for_stone_tool"
   ]
 }

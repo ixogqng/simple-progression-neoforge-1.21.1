@@ -35,7 +35,7 @@ public class ModConfiguredFeatures {
 
         List<OreConfiguration.TargetBlockState> overworldSilverOres = List.of(
                 OreConfiguration.target(stoneReplaceables, ModBlocks.SILVER_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplacables, ModBlocks.SILVER_ORE.get().defaultBlockState())
+                OreConfiguration.target(deepslateReplacables, ModBlocks.DEEPSLATE_SILVER_ORE.get().defaultBlockState())
         );
 
         register(context, OVERWORLD_TIN_ORE_KEY, Feature.ORE, new OreConfiguration(overworldTinOres, 5));
