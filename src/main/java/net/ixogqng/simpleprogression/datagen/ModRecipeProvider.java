@@ -244,14 +244,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.STICK)
                 .unlockedBy("has_copper_ingot", has(Items.COPPER_INGOT))
                 .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.FURNACE)
-                .pattern("FFF")
-                .pattern("FCF")
-                .pattern("FFF")
-                .define('F', Items.COBBLESTONE)
-                .define('C', Items.COAL)
-                .unlockedBy("has_coal", has(Items.COAL))
-                .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.BRONZE_PICKAXE.get())
                 .pattern("FFF")
